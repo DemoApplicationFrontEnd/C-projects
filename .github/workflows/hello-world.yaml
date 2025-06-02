@@ -1,13 +1,16 @@
-name : hello
+name: Hello World Workflow
+
 on:
   push:
-   branches:
-    - main
+    branches:
+      - main
+
 jobs:
- firstheloworkjob:
-    runs-on: ubuntu latest
+  firsthelloworldjob:
+    runs-on: ubuntu-latest
     steps:
-      -name: checkout code
-      uses: actions/checkout@v3
-      name : print message
-      run : echo "Hello word"
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Print message
+        run: echo "Hello world"
